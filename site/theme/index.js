@@ -77,7 +77,7 @@ module.exports = {
       path: 'docs/spec/:children',
       component: contentTmpl,
     }, {
-      path: 'docs/resource/:children',
+      path: '/docs/resource/:children',
       component: contentTmpl,
     }],
   },
