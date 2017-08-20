@@ -38,12 +38,6 @@ export default function Banner({ location, onEnterChange }) {
               <FormattedMessage id="app.home.start" />
             </Link>
           </div>
-          <GitHubButton
-            key="github-button"
-            type="stargazers"
-            namespace="ant-design"
-            repo="ant-design"
-          />
         </QueueAnim>
         <Icon type="down" className="down" />
       </ScrollElement>

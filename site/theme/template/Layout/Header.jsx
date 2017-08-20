@@ -142,20 +142,6 @@ export default class Header extends React.Component {
     });
 
     const menu = [
-      <Button className="lang" type="ghost" size="small" onClick={this.handleLangChange} key="lang">
-        <FormattedMessage id="app.header.lang" />
-      </Button>,
-      <Select
-        key="version"
-        className="version"
-        size="small"
-        dropdownMatchSelectWidth={false}
-        defaultValue={antdVersion}
-        onChange={this.handleVersionChange}
-        getPopupContainer={trigger => trigger.parentNode}
-      >
-        {versionOptions}
-      </Select>,
       <Menu mode={menuMode} selectedKeys={[activeMenuItem]} id="nav" key="nav">
         <Menu.Item key="home">
           <Link to={utils.getLocalizedPathname('/', isZhCN)}>

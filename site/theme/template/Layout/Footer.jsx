@@ -50,24 +50,6 @@ class Footer extends React.Component {
       <footer id="footer">
         <ul>
           <li>
-            <h2><Icon type="github" /> GitHub</h2>
-            <div>
-              <a target="_blank " href="https://github.com/ant-design/ant-design">
-                <FormattedMessage id="app.footer.repo" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank " href="https://ant.design/docs/react/customize-theme">
-                <FormattedMessage id="app.footer.customize-theme" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank " href="https://github.com/websemantics/awesome-ant-design">
-                <FormattedMessage id="app.footer.awesome" />
-              </a>
-            </div>
-          </li>
-          <li>
             <h2><Icon type="link" /> <FormattedMessage id="app.footer.links" /></h2>
             <div>
               <a href="http://mobile.ant.design">Ant Design Mobile</a>
@@ -120,49 +102,6 @@ class Footer extends React.Component {
               <a target="_blank" rel="noopener noreferrer" href="http://enclose.io/">Enclose.IO</a>
               <span> - </span>
               <FormattedMessage id="app.footer.encloseio" />
-            </div>
-          </li>
-          <li>
-            <h2><Icon type="customer-service" /> <FormattedMessage id="app.footer.community" /></h2>
-            <div>
-              <a href="/changelog">
-                <FormattedMessage id="app.footer.change-log" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design/ant-design/wiki/FAQ">
-                <FormattedMessage id="app.footer.faq" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://gitter.im/ant-design/ant-design">
-                <FormattedMessage id="app.footer.discuss-cn" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://gitter.im/ant-design/ant-design-english">
-                <FormattedMessage id="app.footer.discuss-en" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="http://new-issue.ant.design/">
-                <FormattedMessage id="app.footer.bug-report" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design/ant-design/issues">
-                <FormattedMessage id="app.footer.issues" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="http://stackoverflow.com/questions/tagged/antd">
-                <FormattedMessage id="app.footer.stackoverflow" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://segmentfault.com/t/antd">
-                <FormattedMessage id="app.footer.segmentfault" />
-              </a>
             </div>
           </li>
           <li>
