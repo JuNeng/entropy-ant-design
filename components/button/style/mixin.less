@@ -148,10 +148,11 @@
   border: @border-width-base @border-style-base transparent;
   white-space: nowrap;
   line-height: 1.15; // https://github.com/ant-design/ant-design/issues/7070
-  .button-size(@btn-height-base; @btn-padding-base; @font-size-base; @btn-border-radius-base);
+  .button-size(@btn-height-lg; @btn-padding-base; @font-size-base; @btn-border-radius-base);
   user-select: none;
   transition: all .3s @ease-in-out;
   position: relative;
+  .drop-shadow();
 
   > .@{iconfont-css-prefix} {
     line-height: 1;
@@ -165,16 +166,19 @@
 
   &:not([disabled]):hover {
     text-decoration: none;
+    .drop-shadow(@x:0, @y: 3px, @blur: 5px);
   }
 
   &:not([disabled]):active {
     outline: 0;
     transition: none;
+    box-shadow: none;
   }
 
   &.disabled,
   &[disabled] {
     cursor: not-allowed;
+    box-shadow: none;
     > * {
       pointer-events: none;
     }

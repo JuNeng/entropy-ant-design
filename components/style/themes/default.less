@@ -1,4 +1,3 @@
-/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 @import "../color/colors";
 
 // The prefix to use on all css classes from ant.
@@ -42,12 +41,13 @@
 @font-family            : "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @code-family            : Consolas, Menlo, Courier, monospace;
 @heading-color          : fade(#000, 85%);
-@text-color             : fade(#000, 65%);
+@footer-color           : fade(#000, 85%);
+@text-color             : @ebony-6;
 @text-color-secondary   : fade(#000, 43%);
 @heading-color-dark     : fade(#fff, 97%);
 @text-color-dark        : fade(#fff, 91%);
 @text-color-secondary-dark: fade(#fff, 67%);
-@font-size-base         : 12px;
+@font-size-base         : 14px;
 @font-size-lg           : @font-size-base + 2px;
 @line-height-base       : 1.5;
 @border-radius-base     : 4px;
@@ -95,11 +95,11 @@
 
 // Default background color for disabled states, Collapse wrappers,
 // and several active and hover states.
-@background-color-base  : #f7f7f7;
+@background-color-base  : @ebony-1;
 @background-color-active: #eee;
 
 // Disabled states
-@disabled-color         : fade(#000, 25%);
+@disabled-color         : @ebony-4;
 @disabled-bg            : @background-color-base;
 @disabled-color-dark    : fade(#fff, 35%);
 
@@ -125,20 +125,20 @@
 @btn-default-border     : @border-color-base;
 
 @btn-danger-color       : @error-color;
-@btn-danger-bg          : @background-color-base;
-@btn-danger-border      : @border-color-base;
+@btn-danger-bg          : #fff;
+@btn-danger-border      : @error-color;
 
 @btn-disable-color      : @disabled-color;
 @btn-disable-bg         : @disabled-bg;
 @btn-disable-border     : @border-color-base;
 
-@btn-padding-base       : 0 15px;
+@btn-padding-base       : 0 16px;
 @btn-font-size-lg       : @font-size-lg;
 @btn-padding-lg         : @btn-padding-base;
 @btn-padding-sm         : 0 7px;
 
-@btn-height-base        : 28px;
-@btn-height-lg          : 32px;
+@btn-height-base        : 36px;
+@btn-height-lg          : 44px;
 @btn-height-sm          : 22px;
 
 @btn-circle-size        : @btn-height-base;
@@ -333,11 +333,15 @@
 @card-head-height: 48px;
 @card-head-color: @heading-color;
 @card-head-background: @component-background;
+@card-footer-height: 40px;
+@card-footer-color: @footer-color;
+@card-footer-background: @component-background;
 
 // Tabs
 // ---
 @tabs-card-head-background: #f9f9f9;
 @tabs-title-font-size: @font-size-lg;
+@tabs-panel-background: #fff;
 
 // BackTop
 @back-top-color: #fff;

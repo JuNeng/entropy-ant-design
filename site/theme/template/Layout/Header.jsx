@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'bisheng/router';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
-import { Select, Menu, Row, Col, Icon, Button, Popover } from 'antd';
+import { Select, Menu, Row, Col, Icon, Popover } from 'antd';
 import * as utils from '../utils';
-import { version as antdVersion } from '../../../../package.json';
 
 const Option = Select.Option;
 const searchEngine = 'Google';
@@ -108,10 +107,7 @@ export default class Header extends React.Component {
 
   render() {
     const { inputValue, menuMode, menuVisible } = this.state;
-    const { location, picked, isFirstScreen, themeConfig } = this.props;
-    const docVersions = { ...themeConfig.docVersions, [antdVersion]: antdVersion };
-    const versionOptions = Object.keys(docVersions)
-            .map(version => <Option value={docVersions[version]} key={version}>{version}</Option>);
+    const { location, picked, isFirstScreen } = this.props;
     const components = picked.components;
     const module = location.pathname.replace(/(^\/|\/$)/g, '').split('/').slice(0, -1).join('/');
     let activeMenuItem = module || 'home';
