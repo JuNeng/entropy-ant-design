@@ -190,8 +190,8 @@ form {
 
   input[type="radio"],
   input[type="checkbox"] {
-    width: 14px;
-    height: 14px;
+    width: 24px;
+    height: 24px;
   }
 
   // Radios and checkboxes on same line
@@ -244,6 +244,12 @@ form {
     &:only-child {
       display: inline-block;
     }
+  }
+
+  // Tweak weird text placement next to checkbox in the form
+  .@{ant-prefix}-checkbox-wrapper + span, 
+  .@{ant-prefix}-checkbox + span {
+    vertical-align: super;
   }
 }
 
