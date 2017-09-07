@@ -73,7 +73,7 @@ class CompactDemo extends React.Component {
         <br />
         <InputGroup compact>
           <Input style={{ width: '20%' }} defaultValue="0571" />
-          <Input style={{ width: '30%' }} defaultValue="26888888" />
+          <Input style={{ width: '35%' }} defaultValue="26888888" />
         </InputGroup>
         <br />
         <InputGroup compact>
@@ -81,7 +81,7 @@ class CompactDemo extends React.Component {
             <Option value="Zhejiang">Zhejiang</Option>
             <Option value="Jiangsu">Jiangsu</Option>
           </Select>
-          <Input style={{ width: '50%' }} defaultValue="Xihu District, Hangzhou" />
+          <Input style={{ width: '65%' }} defaultValue="Xihu District, Hangzhou" />
         </InputGroup>
         <br />
         <InputGroup compact>
@@ -94,7 +94,7 @@ class CompactDemo extends React.Component {
         </InputGroup>
         <br />
         <InputGroup compact>
-          <Input style={{ width: '50%' }} defaultValue="input content" />
+          <Input style={{ width: '49%' }} defaultValue="input content" />
           <DatePicker />
         </InputGroup>
         <br />
@@ -115,7 +115,7 @@ class CompactDemo extends React.Component {
             <Option value="2">Except</Option>
           </Select>
           <Input style={{ width: 100, textAlign: 'center' }} placeholder="Minimum" />
-          <Input style={{ width: 24, borderLeft: 0, pointerEvents: 'none', backgroundColor: '#fff' }} placeholder="~" disabled />
+          <Input style={{ width: 40, borderLeft: 0, pointerEvents: 'none', backgroundColor: '#fff' }} placeholder="~" disabled />
           <Input style={{ width: 100, textAlign: 'center', borderLeft: 0 }} placeholder="Maximum" />
         </InputGroup>
         <br />
