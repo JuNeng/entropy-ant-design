@@ -19,7 +19,13 @@
   display: inline-block;
   border: @border-width-base @border-style-base @border-color-base;
   border-radius: @border-radius-base;
-  width: 80px;
+  min-width: 80px;
+
+  // only for showcase
+  margin-bottom: 1rem;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   &-handler {
     text-align: center;
