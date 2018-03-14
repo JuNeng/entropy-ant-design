@@ -1,5 +1,5 @@
-@import "../../style/themes/default";
-@import "../../style/mixins/index";
+@import "../../../style/themes/default";
+@import "../../../style/mixins/index";
 @import "../../input/style/mixin";
 
 @select-prefix-cls: ~"@{ant-prefix}-select";
@@ -51,7 +51,7 @@
     .iconfont-mixin();
     position: absolute;
     top: 50%;
-    right: 8px;
+    right: @grid-spacing-sm;
     line-height: 1;
     margin-top: -6px;
     .iconfont-size-under-12px(9px);
@@ -144,8 +144,8 @@
 
   &-selection__rendered {
     display: block;
-    margin-left: 7px;
-    margin-right: 7px;
+    margin-left: @grid-spacing-sm;
+    margin-right: @grid-spacing-sm;
     position: relative;
     line-height: @input-height-base - 2px;
     // https://github.com/ant-design/ant-design/issues/3481#issuecomment-254721026

@@ -1,5 +1,5 @@
-@import "../../style/themes/default";
-@import "../../style/mixins/index";
+@import "../../../style/themes/default";
+@import "../../../style/mixins/index";
 
 @collapse-prefix-cls: ~"@{ant-prefix}-collapse";
 
@@ -15,27 +15,23 @@
 
 .@{collapse-prefix-cls} {
   background-color: @collapse-header-bg;
-  border-radius: @border-radius-base;
+  border-radius: @border-radius-lg;
   border: @border-width-base @border-style-base @border-color-base;
   border-bottom: 0;
 
   & > &-item {
     border-bottom: @border-width-base @border-style-base @border-color-base;
-
-    &:last-child {
-      &,
-      & > .@{collapse-prefix-cls}-header {
-        border-radius: 0 0 @border-radius-base @border-radius-base;
-      }
-    }
+    border-radius: 0 0 @border-radius-lg @border-radius-lg;
 
     > .@{collapse-prefix-cls}-header {
       line-height: 22px;
       padding: 8px 0 8px 32px;
+      border-radius: @border-radius-lg @border-radius-lg 0 0;
+      background-color: @component-background-secondary;
       color: @heading-color;
       cursor: pointer;
       position: relative;
-      transition: all .3s;
+      transition: all 0.3s;
 
       .arrow {
         .collapse-close();
@@ -49,6 +45,10 @@
         transition: transform 0.24s;
         top: 0;
         left: 16px;
+        /* stylelint-disable declaration-block-no-duplicate-properties */
+        top: ~"16px \9";
+        left: ~"0 \9";
+        /* stylelint-enable declaration-block-no-duplicate-properties */
         &:before {
           content: "\E61F";
         }
@@ -57,7 +57,7 @@
   }
 
   &-anim-active {
-    transition: height .2s @ease-out;
+    transition: height 0.2s @ease-out;
   }
 
   &-content {
@@ -78,7 +78,7 @@
 
   &-item:last-child {
     > .@{collapse-prefix-cls}-content {
-      border-radius: 0 0 @border-radius-base @border-radius-base;
+      border-radius: 0 0 @border-radius-lg @border-radius-lg;
     }
   }
 
@@ -103,7 +103,7 @@
   }
 
   &-borderless > &-item > &-header {
-    transition: all .3s;
+    transition: all 0.3s;
     &:hover {
       background-color: @collapse-header-bg;
     }
@@ -118,7 +118,7 @@
     }
   }
 
-  & > &-item:not(&-item-disabled) > .@{collapse-prefix-cls}-header:active {
+  & > &-item > .@{collapse-prefix-cls}-header:active {
     background-color: @collapse-active-bg;
   }
 }

@@ -2,8 +2,6 @@
 @import "../../style/mixins/index";
 
 @card-prefix-cls: ~"@{ant-prefix}-card";
-@card-padding-base: 24px;
-@card-padding-wider: 32px;
 
 .@{card-prefix-cls} {
   background: @component-background;
@@ -26,38 +24,34 @@
     line-height: @card-head-height;
     background: @card-head-background;
     border-bottom: @border-width-base @border-style-base @border-color-split;
-    padding: 0 @card-padding-base;
+    padding: 0 24px;
     border-radius: @border-radius-sm @border-radius-sm 0 0;
-    .clearfix;
 
     &-title {
       font-size: @font-size-lg;
+      display: inline-block;
       text-overflow: ellipsis;
-      max-width: 100%;
+      width: 100%;
       overflow: hidden;
       white-space: nowrap;
       color: @card-head-color;
       font-weight: 500;
-      float: left;
     }
   }
 
   &-extra {
-    float: right;
+    position: absolute;
+    right: 24px;
+    top: 14px;
   }
 
   &-body {
-    padding: @card-padding-base;
+    padding: 24px;
     .clearfix;
   }
 
   &-loading &-body {
     user-select: none;
-    padding: 0;
-  }
-
-  &-loading-content {
-    padding: @card-padding-base;
   }
 
   &-loading-block {
@@ -71,17 +65,16 @@
   }
 
   &-contain-grid &-body {
-    margin: -1px 0 0 -1px;
-    padding: 0;
+    margin: -0.5px;
   }
 
   &-grid {
     border-radius: 0;
     border: 0;
-    box-shadow: 1px 0 0 0 @border-color-split, 0 1px 0 0 @border-color-split, 1px 1px 0 0 @border-color-split, 1px 0 0 0 @border-color-split inset, 0 1px 0 0 @border-color-split inset;
+    box-shadow: 0 0 0 0.5px @border-color-split, 0 0 0 0.5px @border-color-split inset;
     width: 33.33%;
     float: left;
-    padding: @card-padding-base;
+    padding: 24px;
     transition: all .3s;
     &:hover {
       position: relative;
@@ -91,15 +84,15 @@
   }
 
   &-wider-padding &-head {
-    padding: 0 @card-padding-wider;
+    padding: 0 32px;
   }
 
   &-wider-padding &-body {
-    padding: @card-padding-base @card-padding-wider;
+    padding: 24px 32px;
   }
 
   &-wider-padding &-extra {
-    right: @card-padding-wider;
+    right: 32px;
   }
 
   &-padding-transition &-head,

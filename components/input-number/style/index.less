@@ -1,5 +1,5 @@
-@import "../../style/themes/default";
-@import "../../style/mixins/index";
+@import "../../../style/themes/default";
+@import "../../../style/mixins/index";
 @import "../../input/style/mixin";
 
 @input-number-prefix-cls: ~"@{ant-prefix}-input-number";
@@ -20,12 +20,6 @@
   border: @border-width-base @border-style-base @border-color-base;
   border-radius: @border-radius-base;
   min-width: 80px;
-
-  // only for showcase
-  margin-bottom: 1rem;
-  &:last-of-type {
-    margin-bottom: 0;
-  }
 
   &-handler {
     text-align: center;
@@ -84,8 +78,7 @@
     background-color: @input-bg;
     border: 0;
     border-radius: @border-radius-base;
-    padding: 0 7px;
-    display: block;
+    padding: 0 7px 0 @grid-spacing-sm;
     .placeholder();
 
     &[disabled] {
@@ -142,7 +135,7 @@
       }
     }
     &:hover {
-      height: 60% !important;
+      height: 60%!important;
     }
   }
 
@@ -159,7 +152,7 @@
       }
     }
     &:hover {
-      height: 60% !important;
+      height: 60%!important;
     }
   }
 

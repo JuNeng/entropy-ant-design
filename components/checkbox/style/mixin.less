@@ -1,4 +1,4 @@
-@import "../../style/mixins/index";
+@import "../../../style/mixins/index";
 
 .antCheckboxFn(@checkbox-prefix-cls: ~"@{ant-prefix}-checkbox") {
   @checkbox-inner-prefix-cls: ~"@{checkbox-prefix-cls}-inner";
@@ -26,7 +26,7 @@
       height: 100%;
       border-radius: @border-radius-sm;
       border: 1px solid @primary-color;
-      content: '';
+      content: "";
       animation: antCheckboxEffect 0.36s ease-in-out;
       animation-fill-mode: both;
       visibility: hidden;
@@ -49,7 +49,7 @@
       border: @border-width-base @border-style-base @border-color-base;
       border-radius: @border-radius-lg;
       background-color: #fff;
-      transition: all .3s;
+      transition: all 0.3s;
 
       &:after {
         transform: rotate(45deg) scale(0);
@@ -62,8 +62,8 @@
         border: 2px solid #fff;
         border-top: 0;
         border-left: 0;
-        content: ' ';
-        transition: all .1s @ease-in-back;
+        content: " ";
+        transition: all 0.1s @ease-in-back;
       }
     }
 
@@ -83,7 +83,7 @@
 
   // 半选状态
   .@{checkbox-prefix-cls}-indeterminate .@{checkbox-inner-prefix-cls}:after {
-    content: ' ';
+    content: " ";
     transform: scale(1);
     position: absolute;
     left: 6px;
@@ -92,7 +92,8 @@
     height: 2px;
   }
 
-  .@{checkbox-prefix-cls}-indeterminate.@{checkbox-prefix-cls}-disabled .@{checkbox-inner-prefix-cls}:after {
+  .@{checkbox-prefix-cls}-indeterminate.@{checkbox-prefix-cls}-disabled
+    .@{checkbox-inner-prefix-cls}:after {
     border-color: @disabled-color;
   }
 
@@ -108,8 +109,8 @@
     border: 2px solid #fff;
     border-top: 0;
     border-left: 0;
-    content: ' ';
-    transition: all .2s @ease-out-back .1s;
+    content: " ";
+    transition: all 0.2s @ease-out-back 0.1s;
   }
 
   .@{checkbox-prefix-cls}-checked,
@@ -152,9 +153,13 @@
   .@{checkbox-prefix-cls}-wrapper {
     cursor: pointer;
     font-size: @font-size-base;
-    display: inline-block;
+    display: flex;
     &:not(:last-child) {
       margin-right: 8px;
+    }
+
+    > span {
+      line-height: 24px;
     }
   }
 

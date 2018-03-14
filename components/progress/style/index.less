@@ -1,5 +1,5 @@
-@import "../../style/themes/default";
-@import "../../style/mixins/index";
+@import "../../../style/themes/default";
+@import "../../../style/mixins/index";
 
 @progress-prefix-cls: ~"@{ant-prefix}-progress";
 
@@ -37,7 +37,6 @@
 
   &-circle-path {
     stroke: @process-default-color;
-    animation: ~"@{ant-prefix}-progress-appear" .3s;
   }
 
   &-bg {
@@ -130,15 +129,6 @@
     .@{progress-prefix-cls}-text {
       color: @success-color;
     }
-  }
-}
-
-@keyframes ~"@{ant-prefix}-progress-appear" {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 

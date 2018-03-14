@@ -138,7 +138,7 @@
 // Base styles of buttons
 // --------------------------------------------------
 .btn() {
-  .button-size(@btn-height-lg; @btn-padding-base; @font-size-base; @btn-border-radius-base);
+  .button-size(@btn-height-base; @btn-padding-base; @font-size-base; @btn-border-radius-base);
   .drop-shadow();
 
   display: inline-block;
@@ -150,7 +150,7 @@
   background-image: none;
   border: @border-width-base @border-style-base transparent;
   white-space: nowrap;
-  line-height: 1.15; // https://github.com/ant-design/ant-design/issues/7070
+  line-height: @line-height-base;
   user-select: none;
   transition: all .3s @ease-in-out;
   position: relative;
@@ -167,7 +167,6 @@
 
   &:not([disabled]):hover {
     .drop-shadow(@x:0, @y: 3px, @blur: 5px);
-    
     text-decoration: none;
   }
 
@@ -266,7 +265,6 @@
     &:not(:last-child) {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
-      padding-right: 8px;
     }
   }
 

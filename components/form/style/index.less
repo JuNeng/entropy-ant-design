@@ -1,5 +1,5 @@
-@import "../../style/themes/default";
-@import "../../style/mixins/index";
+@import "../../../style/themes/default";
+@import "../../../style/mixins/index";
 @import "../../input/style/mixin";
 @import "../../button/style/mixin";
 @import "../../grid/style/mixin";
@@ -7,7 +7,6 @@
 
 @form-prefix-cls: ~"@{ant-prefix}-form";
 @form-component-height: @input-height-lg;
-@form-feedback-icon-size: 14px;
 
 .reset-form();
 
@@ -190,8 +189,8 @@ form {
 
   input[type="radio"],
   input[type="checkbox"] {
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    height: 14px;
   }
 
   // Radios and checkboxes on same line
@@ -245,11 +244,34 @@ form {
       display: inline-block;
     }
   }
+  
+  // Reset row negative margin inside the form
+  .@{ant-prefix}-row {
+    margin: 0;
+  }
 
-  // Tweak weird text placement next to checkbox in the form
-  .@{ant-prefix}-checkbox-wrapper + span, 
-  .@{ant-prefix}-checkbox + span {
-    vertical-align: super;
+  // Reset first col left padding inside the form
+  // Reset last col right padding inside the form
+  [class^="@{ant-prefix}-col"] {
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+  
+
+  .@{card-prefix-cls} {
+    &-body {
+      padding: @grid-spacing-md;
+    }
+
+    &-footer {
+      background-color: @component-background-secondary;
+      border-top: @border-width-base @border-style-base @border-color-split;
+    }
   }
 }
 
@@ -368,7 +390,7 @@ form {
     .square(@input-height-lg);
     line-height: @input-height-lg;
     text-align: center;
-    font-size: @form-feedback-icon-size;
+    font-size: @font-size-lg;
     animation: zoomIn .3s @ease-out-back;
     .iconfont-font("");
     z-index: 1;

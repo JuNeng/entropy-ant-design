@@ -1,23 +1,29 @@
-@import "../../style/themes/default";
-@import "../../style/mixins/index";
+@import "../../../style/themes/default";
+@import "../../../style/mixins/index";
 @tab-prefix-cls: ~"@{ant-prefix}-tabs";
 
 // card style
 .@{tab-prefix-cls} {
+  &&-card > &-bar {
+    border-top: @border-width-base @border-style-base @border-color-base;
+    margin-bottom: 0;
+  }
+
   &&-card > &-bar &-nav-container {
     height: 32px;
   }
   &&-card > &-bar &-ink-bar {
     visibility: hidden;
   }
+  &&-card > &-bar &-ink-bar + &-tab {
+    border-left: @border-width-base @border-style-base @border-color-base;
+  }
   &&-card > &-bar &-tab {
     margin: 0;
-    border: @border-width-base @border-style-base @border-color-base;
-    border-bottom: 0;
-    border-radius: @border-radius-base @border-radius-base 0 0;
+    border-right: @border-width-base @border-style-base @border-color-base;
+    //border-radius: @border-radius-base @border-radius-base 0 0;
     transition: all 0.3s @ease-in-out;
     background: @tabs-card-head-background;
-    margin-right: 2px;
   }
   &&-card > &-bar &-tab {
     padding: 5px 16px 4px;
@@ -27,7 +33,6 @@
     background: @component-background;
     border-color: @border-color-base;
     color: @primary-color;
-    padding-bottom: 5px;
   }
   &&-card > &-bar &-tab-inactive {
     padding: 0;
@@ -56,9 +61,23 @@
     }
   }
 
+  &&-card--complex > &-bar &-tab-active {
+    padding-bottom: 6px;
+  }
+
+  &&-card--complex:not(&-vertical) {
+    > .@{tab-prefix-cls}-content {
+      > .@{tab-prefix-cls}-tabpane {
+        font-size: @tabs-title-font-size;
+        background: @tabs-panel-background;
+        padding: 5px 16px 4px;
+      }
+    }
+  }
+
   &&-card &-content > &-tabpane,
   &&-editable-card &-content > &-tabpane {
-    transition: none !important;
+    transition: none!important;
     &-inactive {
       overflow: hidden;
     }
@@ -69,6 +88,7 @@
   }
 
   &-extra-content {
+    float: right;
     line-height: 32px;
 
     .@{tab-prefix-cls}-new-tab {
@@ -82,10 +102,9 @@
       font-size: @font-size-base;
       .iconfont-size-under-12px(10px);
       color: @text-color-secondary;
-      transition: all .3s;
+      transition: color 0.3s ease;
       &:hover {
-        color: @primary-color;
-        border-color: @primary-color;
+        color: #404040;
       }
     }
   }
@@ -104,9 +123,6 @@
       &:last-child {
         margin-bottom: 8px;
       }
-    }
-    .@{tab-prefix-cls}-new-tab {
-      width: 90%;
     }
   }
 

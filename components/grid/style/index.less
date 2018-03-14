@@ -1,17 +1,17 @@
-@import "../../style/themes/default";
-@import "../../style/mixins/index";
+@import "../../../style/themes/default";
+@import "../../../style/mixins/index";
 @import "./mixin";
 
 // Grid system
 .@{ant-prefix}-row {
   .make-row();
   display: block;
-  max-width: @grid-max-width;
 }
 
 .@{ant-prefix}-row-flex {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   &:before,
   &:after {

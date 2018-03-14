@@ -51,9 +51,10 @@
     right: 8px;
     top: 50%;
     margin-top: -7px;
-    line-height: 14px;
+    line-height: 1em;
     font-size: @font-size-base;
     transition: all .3s;
+    cursor: pointer;
     user-select: none;
   }
 
@@ -63,7 +64,6 @@
     color: @disabled-color;
     background: @input-bg;
     pointer-events: none;
-    cursor: pointer;
     &:hover {
       color: @text-color-secondary;
     }
@@ -83,6 +83,7 @@
       color: @text-color-secondary;
       display: inline-block;
       line-height: 1;
+      vertical-align: bottom;
     }
   }
 }
